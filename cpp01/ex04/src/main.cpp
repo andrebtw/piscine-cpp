@@ -6,7 +6,7 @@
 /*   By: anrodri2 <anrodri2@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 22:41:08 by anrodri2          #+#    #+#             */
-/*   Updated: 2024/01/20 00:09:31 by anrodri2         ###   ########.fr       */
+/*   Updated: 2024/01/20 00:54:17 by anrodri2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ int	input_error_check(int argc, char **argv)
 
 int	my_sed(char **argv)
 {
+	// STRING FIND & REPLACE SET
+	std::string	str_find = argv[S1_INDEX];
+	std::string	str_replace = argv[S2_INDEX];
+
 	// INPUT FILE OPENING
 	std::ifstream	in_file(argv[FILE_INDEX]);
 	if (!in_file.is_open())
@@ -56,6 +60,32 @@ int	my_sed(char **argv)
 	std::ofstream	out_file((std::string(argv[FILE_INDEX]) + ".replace").c_str());
 	if (!out_file.is_open())
 		return (print_err("File cannot be created.", "Please make sure valid permissions are set.", EXIT_FAILURE));
+
+	// LOOPING EACH EOL TO CONVERT FILE TO STRING
+	std::string	buffer;
+	std::string	file_str;
+
+	std::getline(in_file, buffer);
+	while (true)
+	{
+		file_str = file_str + buffer;
+		if (in_file.eof())
+			break ;
+		file_str = file_str + '\n';
+		std::getline(in_file, buffer);
+	}
+
+	// LOOP TO FIND EACH INDEX TO EACH STRING TO REPLACE
+	size_t	index = file_str.find(argv[S1_INDEX]);
+
+	while (index != std::string::npos)
+	{
+		file_str.erase(index, str_find.size());
+		file_str.insert(index, str_replace);
+		index = index + str_replace.size();
+		index = file_str.find(str_find, index);
+	}
+	out_file << file_str;
 
 	// CLOSING FILES
 	in_file.close();
