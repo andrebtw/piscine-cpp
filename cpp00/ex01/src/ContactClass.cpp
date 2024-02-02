@@ -6,7 +6,7 @@
 /*   By: anrodri2 <anrodri2@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 14:30:16 by anrodri2          #+#    #+#             */
-/*   Updated: 2023/12/21 18:22:13 by anrodri2         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:55:27 by anrodri2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,12 +100,11 @@ void	Contact::setDarkestSecret(std::string input)
 
 void	Contact::displayIndexInfo(void) const
 {
-
 	std::cout << std::endl;
 	std::cout << "First name : " << Contact::getFirstName() << std::endl;
 	std::cout << "Last name : " << Contact::getLastName() << std::endl;
 	std::cout << "Nickname : " << Contact::getNickname() << std::endl;
 	std::cout << "Phone number : " << Contact::getPhoneNumber() << std::endl;
-	std::cout << "Darkeset secret : " << Contact::getDarkestSecret() << std::endl;
+	std::cout << "Darkest secret : " << Contact::getDarkestSecret() << std::endl;
 	return ;
 }

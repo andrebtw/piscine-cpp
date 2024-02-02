@@ -6,7 +6,7 @@
 /*   By: anrodri2 < anrodri2@student.42lyon.fr >    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:56:35 by anrodri2          #+#    #+#             */
-/*   Updated: 2024/01/29 17:38:52 by anrodri2         ###   ########.fr       */
+/*   Updated: 2024/01/30 12:59:06 by anrodri2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Fixed
 		Fixed &operator = (const Fixed &arg);
 		~Fixed();
 
-		int test(void) const;
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 		float	toFloat(void) const;

@@ -6,7 +6,7 @@
 /*   By: anrodri2 <anrodri2@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 22:41:08 by anrodri2          #+#    #+#             */
-/*   Updated: 2024/01/20 00:54:17 by anrodri2         ###   ########.fr       */
+/*   Updated: 2024/02/02 18:21:36 by anrodri2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,12 @@ int	my_sed(char **argv)
 	std::string	file_str;
 
 	std::getline(in_file, buffer);
+	if (!buffer[0])
+	{
+		in_file.close();
+		out_file.close();
+		return (EXIT_SUCCESS);
+	}
 	while (true)
 	{
 		file_str = file_str + buffer;

@@ -6,13 +6,13 @@
 /*   By: anrodri2 <anrodri2@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 16:42:04 by anrodri2          #+#    #+#             */
-/*   Updated: 2024/01/30 17:35:39 by anrodri2         ###   ########.fr       */
+/*   Updated: 2024/01/30 19:18:22 by anrodri2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void) : _name("ClapTrap"), _health(10), _energy(10), _attack(0)
 {
 	std::cout << "Default constructor called." << std::endl;
 	return ;

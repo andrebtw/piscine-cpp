@@ -6,9 +6,12 @@
 /*   By: anrodri2 < anrodri2@student.42lyon.fr >    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 17:48:24 by anrodri2          #+#    #+#             */
-/*   Updated: 2024/01/29 16:19:46 by anrodri2         ###   ########.fr       */
+/*   Updated: 2024/01/29 16:56:16 by anrodri2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FIXED_H
+#define FIXED_H
 
 #include <iostream>
 
@@ -31,3 +34,5 @@ class Fixed
 		static const int	_bits = 8;
 
 };
+
+#endif
