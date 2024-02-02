@@ -6,7 +6,7 @@
 /*   By: anrodri2 <anrodri2@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:59:37 by anrodri2          #+#    #+#             */
-/*   Updated: 2024/01/19 19:00:28 by anrodri2         ###   ########.fr       */
+/*   Updated: 2024/02/02 15:53:11 by anrodri2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main(void)
 {
 	{
 		Weapon club = Weapon("crude spiked club");
+		
 		HumanA bob("Bob", club);
 		bob.attack();
 		club.setType("some other type of club");

@@ -6,13 +6,13 @@
 #    By: anrodri2 <anrodri2@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 11:21:49 by anrodri2          #+#    #+#              #
-#    Updated: 2024/01/19 18:59:08 by anrodri2         ###   ########.fr        #
+#    Updated: 2024/02/02 15:50:08 by anrodri2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY:        fclean, all, clear, re
 
-NAME            =	brainzzz
+NAME            =	human
 
 CMP             =   c++
 FLAG            =   -Wall -Wextra -Werror -std=c++98
